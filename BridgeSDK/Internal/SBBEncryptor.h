@@ -52,6 +52,11 @@
 - (void)removeDirectory;
 
 /*!
+ * Made public for access from outside of the library
+ */
+- (NSData *)cmsEncrypt:(NSData *)data identityPath:(NSString *)identityPath error:(NSError * __autoreleasing *)error;
+
+/*!
  *  Gets a list of files awaiting response from the upload system, so we can decide which ones need to be retried.
  */
 + (NSArray<NSString *> *)encryptedFilesAwaitingUploadResponse;
